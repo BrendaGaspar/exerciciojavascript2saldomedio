@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Cálculo do Saldo </h1>
+    <hr>
+    <form action="">
+        Digite o Saldo do Último Ano:<br/>
+        <input type="text" name="" id="saldomedio"/>
+        <br /><br />
+        <button onclick="calcular();return false;">Calcular</button>
+        <br /><br />
+        <div id="resposta"></div>
+    </form>
+
+
+</body>
+
+</html>
+<script>
+    function calcular(){
+
+        var saldomedio = parseFloat(document.getElementById("saldomedio").value);
+
+
+        if (saldomedio <= 500) {
+            var respostaj = "Nenhum Crédito";
+            resposta.innerHTML = respostaj;
+
+        } else if ((saldomedio >= 501) && (saldomedio <= 1000)) {
+            var credito = saldomedio *30 /100;
+            var respostaj = "O valor do Crédito é: R$ "+credito;
+            resposta.innerHTML = respostaj;
+
+        } else if ((saldomedio >= 1001) && (saldomedio <= 3000)){
+            var credito = saldomedio *40 /100;
+            var respostaj = "O valor do Crédito é: R$ "+credito;
+            resposta.innerHTML = respostaj;
+
+        } else {
+            var credito = saldomedio *50 /100;
+            var respostaj = "O valor do Crédito é: R$ "+credito;
+            resposta.innerHTML = respostaj;
+        }
+
+
+    }
+</script>
